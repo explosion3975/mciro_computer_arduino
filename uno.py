@@ -3,6 +3,7 @@ from waitress import serve
 import time as t
 import threading as th
 from flask_cors import CORS
+import ip
 app = Flask(__name__)
 CORS(app)
 light = 1
@@ -29,5 +30,5 @@ if __name__ == "__main__":
     print("Listening")
     # thread = th.Thread(target = add)
     # thread.start()
-    serve(app, host="0.0.0.0", port=50000)
+    serve(app, host = ip.ip, port=ip.port)
     
