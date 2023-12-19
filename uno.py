@@ -29,5 +29,5 @@ if __name__ == "__main__":
     print("Listening")
     # thread = th.Thread(target = add)
     # thread.start()
-    serve(app, host="140.128.101.27", port=7000)
+    serve(app, host="0.0.0.0", port=50000)
     

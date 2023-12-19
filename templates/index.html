@@ -10,7 +10,6 @@
     <div id="lightValue"></div>
 
     <script>
-        // 定时请求后端获取 light 的值
         setInterval(() => {
             fetch('https://uno.explosion.tw/temperature')
                 .then(response => response.text())
@@ -18,7 +17,7 @@
                     document.getElementById('lightValue').innerText = 'Light Value: ' + data;
                 })
                 .catch(error => console.error('Error:', error));
-        }, 50); // 每隔1秒请求一次
+        }, 50); 
     </script>
 </body>
 </html>
